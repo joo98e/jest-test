@@ -17,7 +17,7 @@ describe("Class Calculator inspect", () => {
 
     it("init with n", () => {
       const n = randomRange(1, 1000);
-      
+
       const _calc: Calculator = new Calculator(n);
       expect(_calc.getNum()).toBe(_calc.getNum());
     });
@@ -51,6 +51,23 @@ describe("Class Calculator inspect", () => {
     it("add", () => {
       calc.add(1);
       expect(calc.getNum()).toBe(1);
+    });
+
+    it("subtract", () => {
+      calc.subtract(1);
+      expect(calc.getNum()).toBe(-1);
+    });
+
+    it("multiply", () => {
+      calc.setNum(7);
+      calc.multiply(2);
+      expect(calc.getNum()).toBe(14);
+    });
+
+    it("divide", () => {
+      calc.setNum(8);
+      calc.divide(4);
+      expect(calc.getNum()).toBe(2);
     });
   });
 });

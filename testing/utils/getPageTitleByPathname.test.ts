@@ -1,5 +1,4 @@
 import getPageTitleByPathname from "@utils/getPageTitleByPathname";
-
 describe("getPageTitleByPathname", () => {
   test("getPageTitleByPathname", () => {
     const reg = new RegExp(/ToDos|Detail Page/);

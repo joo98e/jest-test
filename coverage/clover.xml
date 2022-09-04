@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1662219128828" clover="3.2.0">
-  <project timestamp="1662219128828" name="All files">
-    <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="2" coveredelements="2" complexity="0" loc="1" ncloc="1" packages="1" files="1" classes="1"/>
+<coverage generated="1662299976807" clover="3.2.0">
+  <project timestamp="1662299976807" name="All files">
+    <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="3" methods="11" coveredmethods="11" elements="28" coveredelements="27" complexity="0" loc="13" ncloc="13" packages="1" files="4" classes="4"/>
+    <file name="calc.ts" path="/Users/joo98e/Desktop/react-ref/jest-test/src/utils/calc.ts">
+      <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="8"/>
+      <line num="5" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="9" count="11" type="stmt"/>
+      <line num="13" count="3" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="33" count="1" type="stmt"/>
+    </file>
+    <file name="getPageTitleByPathname.ts" path="/Users/joo98e/Desktop/react-ref/jest-test/src/utils/getPageTitleByPathname.ts">
+      <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="5" type="cond" truecount="1" falsecount="1"/>
+    </file>
+    <file name="randomRange.ts" path="/Users/joo98e/Desktop/react-ref/jest-test/src/utils/randomRange.ts">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="2" type="stmt"/>
+    </file>
     <file name="sum.ts" path="/Users/joo98e/Desktop/react-ref/jest-test/src/utils/sum.ts">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="8" count="1" type="stmt"/>
