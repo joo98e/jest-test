@@ -39,6 +39,6 @@ describe('ProductService', () => {
     
     expect(isAvaliableItems.length).toBe(2);
     
-    // git brnach
+    // git brnach is stub2
   });
 });
