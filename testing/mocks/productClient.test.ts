@@ -1,7 +1,7 @@
 import ProductClient from '@mocks/productClient/productClient';
 import ProductService from '@mocks/productClient/productService';
 
-jest.mock("@mocks/productClient/product_client")
+jest.mock("@mocks/productClient/productClient")
 
 describe('ProductService', () => {
   const fetchAllItems = jest.fn(async () => [
