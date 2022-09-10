@@ -39,6 +39,5 @@ describe('ProductService', () => {
     
     expect(isAvaliableItems.length).toBe(2);
     
-    // 필요없는 주석 삭제
   });
 });
