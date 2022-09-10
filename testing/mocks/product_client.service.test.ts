@@ -39,6 +39,9 @@ describe('ProductService', () => {
     
     expect(isAvaliableItems.length).toBe(2);
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> b45e2897b12dd31f3b68cdc01c7bf8da2a3735bf
   });
 });
