@@ -40,5 +40,6 @@ describe('ProductService', () => {
     expect(isAvaliableItems.length).toBe(2);
     
     // git brnach is stub2
+    // 풀 받지 않고 수정 작업
   });
 });
