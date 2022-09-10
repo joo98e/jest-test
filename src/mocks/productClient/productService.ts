@@ -1,4 +1,4 @@
-import ProductClient from './product_client';
+import ProductClient from './productClient';
 
 class ProductService {
   client: ProductClient;

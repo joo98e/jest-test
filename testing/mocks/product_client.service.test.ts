@@ -1,5 +1,5 @@
-import ProductClient from '@mocks/productClient/product_client';
-import ProductService from '@mocks/productClient/product_service';
+import ProductClient from '@mocks/productClient/productClient';
+import ProductService from '@mocks/productClient/productService';
 
 jest.mock("@mocks/productClient/product_client")
 
