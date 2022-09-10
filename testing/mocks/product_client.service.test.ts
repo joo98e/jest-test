@@ -38,7 +38,6 @@ describe('ProductService', () => {
     const isAvaliableItems = await productService.fetchAvaliableItems();
     
     expect(isAvaliableItems.length).toBe(2);
-    console.log("is branch");
     
   });
 });
