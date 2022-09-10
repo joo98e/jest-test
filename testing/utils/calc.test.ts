@@ -1,7 +1,7 @@
-import Calculator from "@utils/calc";
-import randomRange from "@utils/randomRange";
+import Calculator from '@utils/calc';
+import randomRange from '@utils/randomRange';
 
-describe("Class Calculator inspect", () => {
+describe('Class Calculator inspect', () => {
   let calc: Calculator;
 
   beforeEach(() => {
@@ -10,23 +10,23 @@ describe("Class Calculator inspect", () => {
     calc = new Calculator();
   });
 
-  describe("basically function", () => {
-    it("init with 0", () => {
+  describe('basically function', () => {
+    it('init with 0', () => {
       expect(calc.getNum()).toBe(0);
     });
 
-    it("init with n", () => {
+    it('init with n', () => {
       const n = randomRange(1, 1000);
 
       const _calc: Calculator = new Calculator(n);
       expect(_calc.getNum()).toBe(_calc.getNum());
     });
 
-    it("set num", () => {
+    it('set num', () => {
       expect(calc.setNum(randomRange(1, 1000))).toBe(calc.getNum());
     });
 
-    it("clear", async () => {
+    it('clear', async () => {
       calc.clear();
       expect(calc.getNum()).toBe(0);
       expect(calc.getNum()).not.toBeNull();
@@ -34,8 +34,8 @@ describe("Class Calculator inspect", () => {
     });
   });
 
-  describe("timeout", () => {
-    it("is not timeout(1000ms)", async () => {
+  describe('timeout', () => {
+    it('is not timeout(1000ms)', async () => {
       let promise = new Promise((resolve, reject) => {
         setTimeout(() => {
           resolve(1);
@@ -47,24 +47,24 @@ describe("Class Calculator inspect", () => {
     }, 1000);
   });
 
-  describe("methods", () => {
-    it("add", () => {
+  describe('methods', () => {
+    it('add', () => {
       calc.add(1);
       expect(calc.getNum()).toBe(1);
     });
 
-    it("subtract", () => {
+    it('subtract', () => {
       calc.subtract(1);
       expect(calc.getNum()).toBe(-1);
     });
 
-    it("multiply", () => {
+    it('multiply', () => {
       calc.setNum(7);
       calc.multiply(2);
       expect(calc.getNum()).toBe(14);
     });
 
-    it("divide", () => {
+    it('divide', () => {
       calc.setNum(8);
       calc.divide(4);
       expect(calc.getNum()).toBe(2);

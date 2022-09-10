@@ -8,11 +8,9 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@mocks/*": ["./src/mocks/*"],
       "@utils/*": ["./src/utils/*"]
     }
   },
-  "include": [
-    "src/**/*",
-    "testing/**/*"
-  ]
+  "include": ["src/**/*", "testing/**/*"]
 }
