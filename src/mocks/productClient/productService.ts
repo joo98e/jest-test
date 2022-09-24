@@ -14,7 +14,7 @@ class ProductService {
   }
 
   async fetchExpiryItems() {
-    return this.client.fetchExprary();
+    return this.client.fetchExpiryItems();
   }
 }
 

@@ -1,6 +1,7 @@
 export interface IItem {
   name: string;
   available: boolean;
+  expiryDate?: string;
 }
 
 class ProductClient {
@@ -26,8 +27,8 @@ class ProductClient {
     ];
   }
 
-  async fetchExprary() {
-    const items = fetch('https://example.com/item').then((res) => {
+  async fetchExpiryItems(): Promise<IItem[]> {
+    fetch('https://example.com/item').then((res) => {
       res.json();
     });
 

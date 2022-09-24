@@ -25,10 +25,19 @@ describe('ProductService', () => {
     },
   ]);
 
+  const fetchExpiryItems = jest.fn(async () => [
+    {
+      name: 'tomato',
+      available: false,
+      expiryDate: '2022-02-12',
+    },
+  ]);
+
   // @ts-ignore
   ProductClient.mockImplementation(() => {
     return {
       fetchAllItems,
+      fetchExpiryItems,
     };
   });
 
@@ -68,5 +77,19 @@ describe('ProductService', () => {
 
     expect(fetchAllItems).toHaveBeenCalledTimes(1);
     expect(fetchAllItems).not.toHaveBeenCalledTimes(2);
+  });
+
+  it('ProductService, Call expiry items', async () => {
+    const items = await productService.fetchExpiryItems();
+
+    // @ts-ignore, date error
+    const expiryDate = new Date(items[0].expiryDate).getTime();
+
+    const today = new Date().getTime();
+
+    /**
+     * 만료일이 오늘보다 더 예전이다.
+     */
+    expect(expiryDate).toBeLessThan(today);
   });
 });
