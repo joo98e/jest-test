@@ -1,4 +1,4 @@
-import ProductClient from './productClient';
+import ProductClient, { IItem } from './productClient';
 
 class ProductService {
   client: ProductClient;
@@ -10,7 +10,11 @@ class ProductService {
   async fetchAvaliableItems() {
     return this.client
       .fetchAllItems()
-      .then((items) => items.filter((item) => item.avaliable));
+      .then((items: IItem[]) => items.filter((item) => item.available));
+  }
+
+  async fetchExpiryItems() {
+    return this.client.fetchExprary();
   }
 }
 
