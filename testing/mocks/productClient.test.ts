@@ -83,13 +83,18 @@ describe('ProductService', () => {
     const items = await productService.fetchExpiryItems();
 
     // @ts-ignore, date error
-    const expiryDate = new Date(items[0].expiryDate).getTime();
+    const expiryDate = new Date(items[0].expiryDate);
 
     const today = new Date().getTime();
 
     /**
      * 만료일이 오늘보다 더 예전이다.
      */
-    expect(expiryDate).toBeLessThan(today);
+    expect(expiryDate.getTime()).toBeLessThan(today);
+
+    /**
+     * 예상되는 만료일과 같다.
+     */
+    expect(expiryDate.toISOString().split('T')[0]).toEqual(items[0].expiryDate);
   });
 });
