@@ -7,5 +7,6 @@ export default {
   moduleNameMapper: {
     '^@utils/(.*)$': '<rootDir>/src/utils/$1',
     '^@mocks/(.*)$': '<rootDir>/src/mocks/$1',
+    '^@hooks/(.*)$': '<rootDir>/src/hooks/$1',
   },
 };
