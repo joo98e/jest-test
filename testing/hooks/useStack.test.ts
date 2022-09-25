@@ -45,9 +45,27 @@ describe('Stack', () => {
 
   it('remove Method', function () {
     stack.addItem(seedItem);
-
     stack.removeItemById({ id });
-
     expect(stack.findByAll().length).toBe(0);
+  });
+
+  it('remove Last Item', function () {
+    stack.addItem(seedItem);
+    stack.addItem({
+      id: new Date().getTime(),
+      name: 'banana',
+      desc: 'is longer and yellow',
+      price: 2000,
+    });
+
+    // 지우기 전 length 2
+    expect(stack.findByAll().length).toBe(2);
+
+    stack.removeItemByLastChild();
+
+    // 지우기 후 length 1
+    expect(stack.findByAll().length).toBe(1);
+    // 먼저 넣어두었던 seed Item get 가능
+    expect(stack.findById({ id })).toEqual(seedItem);
   });
 });
